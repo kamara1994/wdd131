@@ -18,14 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
   hamburgerButton.addEventListener('click', function() {
     const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
     hamburgerButton.setAttribute('aria-expanded', !isExpanded);
-    navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
-  });
-
-  // Ensure all images have the same width and height for a uniform gallery
-  const galleryImages = document.querySelectorAll('.gallery figure img');
-  galleryImages.forEach((img) => {
-    img.style.width = '300px';
-    img.style.height = '300px';
-    img.style.objectFit = 'cover';
+    navMenu.classList.toggle('hidden');
   });
 });
