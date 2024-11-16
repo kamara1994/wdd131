@@ -1,0 +1,61 @@
+/* CSS for larger screens - temples-large.css */
+
+/* Apply styles for larger screens using a media query */
+@media (min-width: 768px) {
+  body {
+    font-size: 1.1rem;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex;
+    list-style: none;
+    background: none;
+    padding: 0;
+  }
+
+  #nav-menu li {
+    border-bottom: none;
+    margin-right: 1rem;
+  }
+
+  #nav-menu li a {
+    padding: 0.5rem 1rem;
+    color: #fff;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  figure img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+
+  footer {
+    padding: 2rem;
+  }
+}
