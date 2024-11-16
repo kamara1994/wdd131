@@ -1,109 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temple Album</title>
-  <!-- Meta description for SEO -->
-  <meta name="description" content="A picture album showcasing various temples around the world.">
-  <!-- Meta author for attribution -->
-  <meta name="author" content="Joseph Allan Kamara">
-  <!-- Link to Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Link to CSS files -->
-  <link rel="stylesheet" href="styles/temples.css">
-  <link rel="stylesheet" href="styles/temples-large.css">
-  <!-- Link to JavaScript file -->
-  <script src="scripts/temples.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Joseph Allan Kamara">
+    <meta name="author" content="Joseph Allan Kamara">
+    <title>WDD 131 - Dynamic Web Fundamentals - Joseph Allan Kamara</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
-  <!-- Header with Navigation -->
-  <header>
-    <h1>Temple Album</h1>
-    <nav>
-      <button class="hamburger" id="hamburger" aria-controls="nav-menu" aria-expanded="false">&#9776;</button>
-      <ul id="nav-menu" class="hidden">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Old</a></li>
-        <li><a href="#">New</a></li>
-        <li><a href="#">Large</a></li>
-        <li><a href="#">Small</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <!-- Main Content -->
-  <main>
-    <h2>Temple Gallery</h2>
-    <!-- Gallery of Temple Images -->
-    <section class="gallery">
-      <figure>
-        <img src="images/Salt Lake Temple.jpg" alt="Salt Lake Temple">
-        <figcaption>Salt Lake Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/Provo Temple.jpeg" alt="Provo City Center Temple">
-        <figcaption>Provo City Center Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/Nauvoo Temple.jpeg" alt="Nauvoo Temple">
-        <figcaption>Nauvoo Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/San Diego Temple.jpeg" alt="San Diego Temple">
-        <figcaption>San Diego Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/Rome Temple.jpeg" alt="Rome Temple">
-        <figcaption>Rome Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/Paris Temple.jpg" alt="Paris Temple">
-        <figcaption>Paris Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/Hong Kong Temple.jpeg" alt="Hong Kong Temple">
-        <figcaption>Hong Kong Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/Mesa Temple.jpg" alt="Mesa Temple">
-        <figcaption>Mesa Temple</figcaption>
-      </figure>
-      <figure>
-        <img src="images/Salt Lake Temple Night.jpg" alt="Salt Lake Temple (Night)">
-        <figcaption>Salt Lake Temple (Night)</figcaption>
-      </figure>
-    </section>
-  </main>
+    <!-- Header Section -->
+    <header>
+        <h1>WDD 131 - Dynamic Web Fundamentals</h1>
+        <nav>
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+            <a href="https://byui.instructure.com/" target="_blank">I-Learn</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+            <a href="#" target="_blank">Final Project</a>
+        </nav>
+    </header>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; <span id="year"></span> Joseph Allan Kamara, Sierra Leone West Africa <span id="modified"></span></p>
-  </footer>
+    <!-- Main Content -->
+    <main>
+        <section class="card">
+            <h2>Introduction to Web Development</h2>
+            <img src="images/wdd131 code on laptop.jpg" alt="Web Development Illustration">
+            <p>This section introduces the basics of web development.</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Learn">MDN Web Docs</a></li>
+                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                <li><a href="https://web.dev/">Web.dev</a></li>
+            </ul>
+        </section>
+        <section class="card">
+            <h2>Learning HTML, CSS, and JavaScript</h2>
+            <img src="images/wdd131code image.jpeg" alt="HTML, CSS, JavaScript">
+            <p>This section covers HTML, CSS, and JavaScript basics.</p>
+            <ul>
+                <li><a href="https://www.codecademy.com/learn/learn-html">Codecademy HTML Course</a></li>
+                <li><a href="https://www.freecodecamp.org/">FreeCodeCamp</a></li>
+                <li><a href="https://www.udemy.com/">Udemy Web Development Courses</a></li>
+            </ul>
+        </section>
+    </main>
 
-  <script>
-    // JavaScript for dynamic footer and hamburger menu
-    document.addEventListener('DOMContentLoaded', function() {
-      // Dynamic Footer: Set the current year
-      const yearSpan = document.getElementById('year');
-      const currentYear = new Date().getFullYear();
-      yearSpan.textContent = currentYear;
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Joseph Allan Kamara, Sierra Leone West Africa</p>
+        <p id="lastModified"></p>
+    </footer>
 
-      // Dynamic Footer: Set the last modified date
-      const modifiedSpan = document.getElementById('modified');
-      const lastModified = new Date(document.lastModified);
-      modifiedSpan.textContent = `| Last Modified: ${lastModified.toLocaleDateString()}`;
-
-      // Hamburger Menu Toggle
-      const hamburgerButton = document.getElementById('hamburger');
-      const navMenu = document.getElementById('nav-menu');
-
-      hamburgerButton.addEventListener('click', function() {
-        const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
-        hamburgerButton.setAttribute('aria-expanded', !isExpanded);
-        navMenu.classList.toggle('hidden');
-      });
-    });
-  </script>
 </body>
 </html>
