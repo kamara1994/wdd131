@@ -1,5 +1,6 @@
 <!-- place.html -->
 <!DOCTYPE html>
+<!-- Ensure the document type declaration is at the very top of the file -->
 <html lang="en">
 
 <head>
@@ -13,6 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="scripts/main.js" defer></script>
     <title>Country Page: United States of America</title>
+    <style>
+        h1::after {
+            content: ' 🌟';
+            font-size: 1.5rem;
+            color: gold;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,11 +29,15 @@
         <picture>
             <source media="(min-width: 800px)" srcset="images/hero-large.webp">
             <source media="(max-width: 799px)" srcset="images/hero-small.webp">
-            <img src="images/hero-default.webp" alt="Hero Image for the United States of America" loading="lazy">
+            <img src="images/optimized-hero-default.webp" alt="Hero Image for the United States of America" loading="lazy">
         </picture>
     </header>
 
     <main>
+        <section id="about">
+            <h2>About the United States of America</h2>
+            <p>The United States of America (USA) is a country primarily located in North America. It is known for its diverse culture, natural landmarks, and advanced economy.</p>
+        </section>
         <section id="weather">
             <h2>Weather</h2>
             <div class="weather-info">
@@ -44,6 +56,24 @@
     <footer>
         <p>&copy; <span id="year"></span> Joseph Allan Kamara. Last Modified: <span id="last-modified"></span></p>
     </footer>
+
+    <script>
+        // JavaScript for footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+
+        // Function to calculate wind chill
+        function calculateWindChill(temp, windSpeed) {
+            return 13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16);
+        }
+
+        // Weather section - calculate wind chill
+        const temperature = 5; // in Celsius
+        const windSpeed = 6; // in km/h
+        if (temperature <= 10 && windSpeed > 4.8) {
+            document.getElementById('wind-chill').textContent = calculateWindChill(temperature, windSpeed).toFixed(2) + '°C';
+        }
+    </script>
 </body>
 
 </html>
