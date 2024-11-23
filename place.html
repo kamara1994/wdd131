@@ -1,0 +1,43 @@
+<!-- place.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A page about a country showcasing information, weather, and hero images.">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="scripts/main.js" defer></script>
+    <title>Country Page</title>
+</head>
+
+<body>
+    <header>
+        <h1>Country Page: United State  Of America</h1>
+        <picture>
+            <source media="(min-width: 500px)" srcset="images/america.jpg">
+            <source media="(max-width: 500px)" srcset="images/america.jpg">
+            <img src="images/america.jpg" alt="Hero Image for Country">
+        </picture>
+    </header>
+
+    <section id="weather">
+        <h2>Weather</h2>
+        <div class="weather-info">
+            <p>Current Temperature: <span id="temperature">5°C</span></p>
+            <p>Wind Speed: <span id="wind-speed">6 km/h</span></p>
+            <p>Wind Chill Factor: <span id="wind-chill">N/A</span></p>
+            <svg id="weather-icon" viewBox="0 0 100 100" class="mobile-only">
+                <!-- SVG content here -->
+            </svg>
+            <span class="wider-view-icon">⛅</span>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Joseph Allan Kamara <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+
+</html>
