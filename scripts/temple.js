@@ -1,23 +1,17 @@
-// JavaScript for temples.js
+// main.js
 
-document.addEventListener('DOMContentLoaded', function() {
-  // Dynamic Footer: Set the current year
-  const yearSpan = document.getElementById('year');
-  const currentYear = new Date().getFullYear();
-  yearSpan.textContent = currentYear;
+// JavaScript for footer
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('last-modified').textContent = document.lastModified;
 
-  // Dynamic Footer: Set the last modified date
-  const modifiedSpan = document.getElementById('modified');
-  const lastModified = new Date(document.lastModified);
-  modifiedSpan.textContent = `| Last Modified: ${lastModified.toLocaleDateString()}`;
+// Function to calculate wind chill
+function calculateWindChill(temp, windSpeed) {
+    return 13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16);
+}
 
-  // Hamburger Menu Toggle
-  const hamburgerButton = document.getElementById('hamburger');
-  const navMenu = document.getElementById('nav-menu');
-
-  hamburgerButton.addEventListener('click', function() {
-    const isExpanded = hamburgerButton.getAttribute('aria-expanded') === 'true';
-    hamburgerButton.setAttribute('aria-expanded', !isExpanded);
-    navMenu.classList.toggle('hidden');
-  });
-});
+// Weather section - calculate wind chill
+const temperature = 5; // in Celsius
+const windSpeed = 6; // in km/h
+if (temperature <= 10 && windSpeed > 4.8) {
+    document.getElementById('wind-chill').textContent = calculateWindChill(temperature, windSpeed).toFixed(2) + '°C';
+}
