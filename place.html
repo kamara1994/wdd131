@@ -5,39 +5,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A page about a country showcasing information, weather, and hero images.">
+    <meta name="description" content="A page about the United States of America showcasing information, weather, and hero images.">
+    <meta name="author" content="Joseph Allan Kamara">
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="scripts/main.js" defer></script>
-    <title>Country Page</title>
+    <title>Country Page: United States of America</title>
 </head>
 
 <body>
     <header>
-        <h1>Country Page: United State  Of America</h1>
+        <h1>Country Page: United States of America</h1>
         <picture>
-            <source media="(min-width: 500px)" srcset="images/america.jpg">
-            <source media="(max-width: 500px)" srcset="images/america.jpg">
-            <img src="images/america.jpg" alt="Hero Image for Country">
+            <source media="(min-width: 800px)" srcset="images/hero-large.webp">
+            <source media="(max-width: 799px)" srcset="images/hero-small.webp">
+            <img src="images/hero-default.webp" alt="Hero Image for the United States of America" loading="lazy">
         </picture>
     </header>
 
-    <section id="weather">
-        <h2>Weather</h2>
-        <div class="weather-info">
-            <p>Current Temperature: <span id="temperature">5°C</span></p>
-            <p>Wind Speed: <span id="wind-speed">6 km/h</span></p>
-            <p>Wind Chill Factor: <span id="wind-chill">N/A</span></p>
-            <svg id="weather-icon" viewBox="0 0 100 100" class="mobile-only">
-                <!-- SVG content here -->
-            </svg>
-            <span class="wider-view-icon">⛅</span>
-        </div>
-    </section>
+    <main>
+        <section id="weather">
+            <h2>Weather</h2>
+            <div class="weather-info">
+                <p>Current Temperature: <span id="temperature">5°C</span></p>
+                <p>Wind Speed: <span id="wind-speed">6 km/h</span></p>
+                <p>Wind Chill Factor: <span id="wind-chill">N/A</span></p>
+                <svg id="weather-icon" viewBox="0 0 100 100" class="mobile-only">
+                    <!-- Example Sun Icon -->
+                    <circle cx="50" cy="50" r="30" fill="yellow" />
+                </svg>
+                <span class="wider-view-icon">⛅</span>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Joseph Allan Kamara <span id="last-modified"></span></p>
+        <p>&copy; <span id="year"></span> Joseph Allan Kamara. Last Modified: <span id="last-modified"></span></p>
     </footer>
 
+    <script>
+        // JavaScript for footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById('last-modified').textContent = document.lastModified;
+
+        // Function to calculate wind chill
+        function calculateWindChill(temp, windSpeed) {
+            return 13.12 + 0.6215 * temp - 11.37 * Math.pow(windSpeed, 0.16) + 0.3965 * temp * Math.pow(windSpeed, 0.16);
+        }
+
+        // Weather section - calculate wind chill
+        const temperature = 5; // in Celsius
+        const windSpeed = 6; // in km/h
+        if (temperature <= 10 && windSpeed > 4.8) {
+            document.getElementById('wind-chill').textContent = calculateWindChill(temperature, windSpeed).toFixed(2) + '°C';
+        }
+    </script>
 </body>
 
 </html>
