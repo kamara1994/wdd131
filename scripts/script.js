@@ -104,8 +104,6 @@ function displayTemples(filteredTemples) {
 
         templeCardsSection.appendChild(templeCard);
     });
-
-    console.log("Displayed temples:", filteredTemples);
 }
 
 // Display all temples initially

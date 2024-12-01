@@ -3,6 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8; /* Light background for better contrast */
 }
 
 header {
@@ -29,6 +30,11 @@ nav a {
     color: #fff;
 }
 
+nav a:hover {
+    color: #ffcc00; /* Change the color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
 .filters {
     text-align: center;
     margin: 20px;
@@ -37,6 +43,15 @@ nav a {
 .filters button {
     margin: 5px;
     padding: 10px;
+    background-color: #005f73;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #0a9396; /* Lighter color on hover */
 }
 
 .temple-cards {
@@ -54,6 +69,7 @@ nav a {
     width: 300px;
     text-align: center;
     background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
