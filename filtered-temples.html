@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtered Temples</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+<body>
+    <header>
+        <img src="images/byui-i-logo.png" alt="BYU-I Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="w1.html">W1</a></li>
+                <li><a href="w2.html">W2</a></li>
+                <li><a href="w3.html">W3</a></li>
+                <li><a href="filtered-temples.html">W4</a></li>
+                <li><a href="w5.html">W5</a></li>
+                <li><a href="w6.html">W6</a></li>
+                <li><a href="w7.html">W7</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Filtered Temples</h1>
+        <section class="filters">
+            <button id="old">Old (Before 1900)</button>
+            <button id="new">New (After 2000)</button>
+            <button id="large">Large (> 90k sq ft)</button>
+            <button id="small">Small (< 10k sq ft)</button>
+            <button id="home">Home (All Temples)</button>
+        </section>
+
+        <section id="temple-cards" class="temple-cards"></section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> - Joseph Allan Kamara</p>
+        <p>Last Modified: <span id="last-modified"></span></p>
+    </footer>
+
+    <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>
