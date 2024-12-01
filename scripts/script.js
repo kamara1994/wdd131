@@ -55,7 +55,6 @@ const temples = [
         imageUrl:
             "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // Add 3 additional temples
     {
         templeName: "Accra Ghana",
         location: "Accra, Ghana",
@@ -105,6 +104,8 @@ function displayTemples(filteredTemples) {
 
         templeCardsSection.appendChild(templeCard);
     });
+
+    console.log("Displayed temples:", filteredTemples);
 }
 
 // Display all temples initially
@@ -112,12 +113,12 @@ displayTemples(temples);
 
 // Filter Buttons
 document.getElementById('old').addEventListener('click', () => {
-    const oldTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+    const oldTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) < 1900);
     displayTemples(oldTemples);
 });
 
 document.getElementById('new').addEventListener('click', () => {
-    const newTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+    const newTemples = temples.filter(temple => parseInt(temple.dedicated.split(",")[0]) > 2000);
     displayTemples(newTemples);
 });
 
