@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #4CAF50; /* Dark Green */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header .nav-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+header .nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header .nav-menu li a:hover {
+    color: #FFD700; /* Gold */
+}
+
+.hero {
+    background: linear-gradient(to bottom right, #4CAF50, #3e8e41); /* Green Gradient */
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+}
+
+.hero-content button {
+    padding: 10px 20px;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    color: #4CAF50;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero-content button:hover {
+    background-color: white;
+    color: #4CAF50;
+}
+
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+}
+
+.specials-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.dish {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dish img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.dish:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer .social-media img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+footer .social-media img:hover {
+    transform: scale(1.2);
+}
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+body.dark-mode header {
+    background-color: #444;
+}
+
+body.dark-mode footer {
+    background-color: #444;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(to bottom right, #222, #444);
+}
+
+body.dark-mode .dish {
+    background-color: #555;
+    color: white;
+    border-color: #666;
+}
+<style>
+        /* Inline CSS for demonstration */
+        main img {
+            display: block;
+            margin: 20px auto; /* Adds spacing and centers the image */
+            max-width: 60%;    /* Reduces the image size */
+            height: auto;      /* Keeps the aspect ratio intact */
+            border-radius: 8px; /* Soft corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+        }
+        main img {
+            display: block;
+            margin: 20px auto; /* Adds spacing and centers the image */
+            max-width: 60%;    /* Reduces the image size */
+            height: auto;      /* Keeps the aspect ratio intact */
+            border-radius: 8px; /* Soft corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+        }
