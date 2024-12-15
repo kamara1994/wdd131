@@ -1,0 +1,43 @@
+/* Base Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFDD0; /* Cream */
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #800020; /* Deep Burgundy */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Section Styling */
+section {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 800px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Headings */
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #800020;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #800020;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+}
