@@ -4,15 +4,16 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
-    color: #333;
+    color: #333; /* General text color */
     transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #4CAF50; /* Dark Green */
-    color: white;
+    background-color: #06d806; /* Darker Green for contrast */
+    color: white; 
     padding: 1rem 0;
     text-align: center;
+    color: white;
 }
 
 header .nav-menu {
@@ -25,19 +26,19 @@ header .nav-menu {
 }
 
 header .nav-menu li a {
-    color: white;
+    color: white; /* High contrast text color */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 header .nav-menu li a:hover {
-    color: #FFD700; /* Gold */
+    color: #FFEB3B; /* Bright yellow for better contrast */
 }
 
 .hero {
-    background: linear-gradient(to bottom right, #4CAF50, #3e8e41); /* Green Gradient */
-    color: white;
+    background: linear-gradient(to bottom right, #2E7D32, #1B5E20); /* Darker Green Gradient */
+    color: #FFFFFF; /* White text with proper contrast */
     text-align: center;
     padding: 3rem 1rem;
 }
@@ -45,26 +46,28 @@ header .nav-menu li a:hover {
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    color: #FFEB3B; /* Bright yellow for headings */
 }
 
 .hero-content p {
     font-size: 1.2rem;
+    color: #E0E0E0; /* Light gray for readability */
 }
 
 .hero-content button {
     padding: 10px 20px;
-    background-color: #FFD700;
+    background-color: #FFB300; /* Bright yellow-orange for contrast */
     border: none;
     border-radius: 5px;
-    color: #4CAF50;
+    color: #333; /* Dark text for readability */
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .hero-content button:hover {
-    background-color: white;
-    color: #4CAF50;
+    background-color: #FFC107; /* Lighter yellow */
+    color: #1B5E20; /* Dark green for contrast */
 }
 
 main {
@@ -81,13 +84,14 @@ main {
 }
 
 .dish {
-    background: white;
+    background: #FFFFFF; /* White background for cards */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 1rem;
     width: 250px;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    color: #333; /* High contrast text */
 }
 
 .dish img {
@@ -102,8 +106,8 @@ main {
 }
 
 footer {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #2E7D32; /* Dark Green for footer */
+    color: #FFFFFF; /* White text for contrast */
     text-align: center;
     padding: 1rem 0;
 }
@@ -117,6 +121,7 @@ footer .social-media img {
 footer .social-media img:hover {
     transform: scale(1.2);
 }
+
 /* Dark Mode */
 body.dark-mode {
     background-color: #333;
@@ -132,7 +137,7 @@ body.dark-mode footer {
 }
 
 body.dark-mode .hero {
-    background: linear-gradient(to bottom right, #222, #444);
+    background: linear-gradient(to bottom right, #111, #222);
 }
 
 body.dark-mode .dish {
@@ -140,21 +145,13 @@ body.dark-mode .dish {
     color: white;
     border-color: #666;
 }
-<style>
-        /* Inline CSS for demonstration */
-        main img {
-            display: block;
-            margin: 20px auto; /* Adds spacing and centers the image */
-            max-width: 60%;    /* Reduces the image size */
-            height: auto;      /* Keeps the aspect ratio intact */
-            border-radius: 8px; /* Soft corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
-        }
-        main img {
-            display: block;
-            margin: 20px auto; /* Adds spacing and centers the image */
-            max-width: 60%;    /* Reduces the image size */
-            height: auto;      /* Keeps the aspect ratio intact */
-            border-radius: 8px; /* Soft corners */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
-        }
+
+/* Image Styling */
+main img {
+    display: block;
+    margin: 20px auto; /* Adds spacing and centers the image */
+    max-width: 60%;    /* Reduces the image size */
+    height: auto;      /* Keeps the aspect ratio intact */
+    border-radius: 8px; /* Soft corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow */
+}
